@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allotment Status</title>
+  <link rel="stylesheet" href="css/allotment.css">
+
+  <!-- Auth check script before DOM renders -->
+  <script src="js/auth.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>🎓 Allotment Status</h1>
+    <div class="header-actions">
+      <button class="btn secondary" onclick="goBack()">⬅ Dashboard</button>
+      <button class="btn danger" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- Status card -->
+  <main class="container">
+    <section id="statusBox" class="status-card">
+      <p>Loading your allotment result...</p>
+    </section>
+  </main>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/allotment.js" defer></script>
+</body>
+</html>

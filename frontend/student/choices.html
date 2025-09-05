@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Choice Filling System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/choices.css">
+    <script src="js/auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="back-btn" onclick="goBack()">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+            <h1>College Choice Filling</h1>
+            <p>Select your preferred colleges and branches in order of preference</p>
+        </header>
+        
+        <div class="content">
+            <div id="choices-msg" class="message info">
+                Loading your choice filling status...
+            </div>
+            
+            <!-- Builder Section -->
+            <div id="builder">
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-plus-circle"></i> Add New Choice
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="collegeSelect">College</label>
+                        <select id="collegeSelect">
+                            <option value="">Loading colleges...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="branchSelect">Branch</label>
+                        <select id="branchSelect">
+                            <option value="">First select a college</option>
+                        </select>
+                    </div>
+                    
+                    <button id="addChoiceBtn" class="btn btn-primary" disabled>
+                        <i class="fas fa-plus"></i> Add to Choices
+                    </button>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-list-ol"></i> Your Choices
+                    </div>
+                    
+                    <table id="choicesTable">
+                        <thead>
+                            <tr>
+                                <th width="10%">#</th>
+                                <th width="45%">College</th>
+                                <th width="35%">Branch</th>
+                                <th width="10%">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4" style="text-align: center; padding: 20px;">
+                                    No choices added yet. Start by selecting a college and branch above.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="flex-group">
+                        <button id="clearAllBtn" class="btn btn-secondary" disabled>
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="confirm-section">
+                    <div class="form-group">
+                        <label for="confirmInput">Type "CONFIRM" to submit your choices</label>
+                        <input type="text" id="confirmInput" placeholder="Type CONFIRM here">
+                    </div>
+                    
+                    <button id="submitChoicesBtn" class="btn btn-primary" disabled>
+                        <i class="fas fa-paper-plane"></i> Submit Choices
+                    </button>
+                </div>
+            </div>
+            
+            <!-- View Only Section (for submitted choices) -->
+            <div id="viewOnly" class="view-only">
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-check-circle"></i> Submitted Choices
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="stat-number" id="submitted-count">0</div>
+                            <div class="stat-label">Choices Submitted</div>
+                        </div>
+                    </div>
+                    
+                    <table id="submittedChoices">
+                        <thead>
+                            <tr>
+                                <th width="10%">Preference</th>
+                                <th width="45%">College</th>
+                                <th width="45%">Branch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Submitted choices will be displayed here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="resetChoicesContainer" style="text-align: center; margin-top: 20px;">
+                    <button id="resetChoicesBtn" class="btn btn-danger">
+                        <i class="fas fa-redo"></i> Reset Choices
+                    </button>
+                    <p style="font-size: 14px; color: #7f8c8d; margin-top: 10px;">
+                        Note: Resetting will delete all your previous choices and allow you to start fresh.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 College Admission Portal | Ensure your choices are correct before submitting</p>
+        </footer>
+    </div>
+  <script src="js/app.js" defer></script>
+  <script src="js/choices.js" defer></script>
+
+</body>
+</html>

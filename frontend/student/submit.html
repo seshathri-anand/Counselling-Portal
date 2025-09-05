@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/auth.js"></script>
+  <meta charset="UTF-8">
+  <title>Student Submission</title>
+  <link rel="stylesheet" href="css/submit.css">
+  <script src="js/auth.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <a href="dashboard.html">⬅ Dashboard</a>
+    <a href="choices.html">➡ Choices</a>
+  </div>
+
+  <!-- Wrapper -->
+  <div class="form-wrapper">
+    <!-- Messages -->
+    <div id="messageBox" class="message-box" style="display:none;"></div>
+
+    <!-- Form -->
+    <div id="formContainer" class="form-container">
+      <h2>Student Submission</h2>
+      <form id="submitForm" class="form-container">
+        <!-- Full Name -->
+        <div class="input-group">
+          <label for="full_name">Full Name</label>
+          <input type="text" name="full_name" id="full_name" required>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="input-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" required>
+        </div>
+
+        <!-- Marksheet Number -->
+        <div class="input-group">
+          <label for="marksheet_number">Marksheet Number</label>
+          <input type="text" name="marksheet_number" id="marksheet_number" required>
+        </div>
+
+        <!-- Marks Section -->
+        <fieldset class="marks-section">
+          <legend>Enter Marks (0 - 100)</legend>
+
+          <div class="input-group">
+            <label for="physics">Physics</label>
+            <input type="number" name="physics" id="physics" min="0" max="100" required>
+          </div>
+
+          <div class="input-group">
+            <label for="chemistry">Chemistry</label>
+            <input type="number" name="chemistry" id="chemistry" min="0" max="100" required>
+          </div>
+
+          <div class="input-group">
+            <label for="maths">Maths</label>
+            <input type="number" name="maths" id="maths" min="0" max="100" required>
+          </div>
+        </fieldset>
+
+        <!-- Terms -->
+        <div class="input-group terms">
+          <label>
+            <input type="checkbox" id="terms" required> I agree to the Terms & Conditions
+          </label>
+        </div>
+        <!-- Terms -->
+
+        <!-- Attempts Left -->
+        <div class="input-group">
+          <p id="attemptsLeft" style="font-weight: bold; color: #333;">
+            Attempts left: 3
+          </p>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+      <div id="statusBox" style="display:none; margin-top:15px;"></div>
+
+
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/submit.js"></script>
+</body>
+</html>

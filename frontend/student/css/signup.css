@@ -1,0 +1,250 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .illustration {
+      flex: 1;
+      background: linear-gradient(to right, #3498db, #2c3e50);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .illustration-content {
+      max-width: 320px;
+    }
+
+    .illustration h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .illustration p {
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .features {
+      list-style: none;
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    .features li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .features i {
+      margin-right: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-section {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .logo i {
+      font-size: 28px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #2c3e50;
+    }
+
+    .input-with-icon {
+      position: relative;
+    }
+
+    .input-with-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #7f8c8d;
+    }
+
+    .input-with-icon input {
+      padding-left: 45px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    .error-message {
+      color: #e74c3c;
+      font-size: 14px;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .password-requirements {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+    }
+
+    .password-requirements ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .password-requirements li {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-requirements i {
+      margin-right: 5px;
+    }
+
+    .requirement-met {
+      color: #27ae60;
+    }
+
+    .requirement-not-met {
+      color: #7f8c8d;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 25px;
+      color: #7f8c8d;
+    }
+
+    .login-link a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .alert {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .alert-error {
+      background: #ffecec;
+      color: #e74c3c;
+      border: 1px solid #f5c6cb;
+    }
+
+    .alert-success {
+      background: #e6f4e6;
+      color: #27ae60;
+      border: 1px solid #c3e6cb;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .illustration {
+        padding: 30px;
+      }
+      
+      .form-section {
+        padding: 30px;
+      }
+    }

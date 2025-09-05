@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form id="adminLoginForm">
+      <div class="form-group">
+        <input name="email" type="email" placeholder="Admin Email" required>
+      </div>
+      <div class="form-group">
+        <input name="password" type="password" placeholder="Password" required>
+      </div>
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+    <p class="error-message" id="loginError"></p>
+  </div>
+
+  <!-- include app.js -->
+  <script src="js/app.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

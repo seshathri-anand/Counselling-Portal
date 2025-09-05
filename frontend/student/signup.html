@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Sign Up | College Counseling Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Left Column / Illustration Section -->
+    <div class="illustration">
+      <div class="illustration-content">
+        <h2>Start Your Counseling Journey</h2>
+        <p>Sign up to fill your choice list, track allotments, and participate in the counseling process.</p>
+        
+        <ul class="features">
+          <li><i class="fas fa-check-circle"></i> Fill choice preferences for colleges and branches</li>
+          <li><i class="fas fa-check-circle"></i> Track application status and counseling schedule</li>
+          <li><i class="fas fa-check-circle"></i> Receive notifications for allotments and updates</li>
+          <li><i class="fas fa-check-circle"></i> Admin can override submissions if needed</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Right Column / Signup Form -->
+    <div class="form-section">
+      <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>College Counseling Portal</h1>
+      </div>
+      
+      <h2>Create Student Account</h2>
+      
+      <div id="errorAlert" class="alert alert-error" style="display:none;">
+        <i class="fas fa-exclamation-circle"></i> <span id="errorText"></span>
+      </div>
+      
+      <div id="successAlert" class="alert alert-success" style="display:none;">
+        <i class="fas fa-check-circle"></i> <span id="successText"></span>
+      </div>
+      
+      <form id="signupForm">
+        <!-- Username -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+          </div>
+          <div id="usernameError" class="error-message" style="display:none;"><span></span></div>
+        </div>
+        
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div id="emailError" class="error-message" style="display:none;"><span></span></div>
+        </div>
+        
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Create a strong password" required>
+          </div>
+          <div id="passwordError" class="error-message" style="display:none;"><span></span></div>
+          
+          <div id="passwordRequirements" class="password-requirements" style="display:none;">
+            <p>Password must include:</p>
+            <ul>
+              <li id="lengthReq"><i class="fas fa-circle"></i> At least 8 characters</li>
+              <li id="uppercaseReq"><i class="fas fa-circle"></i> One uppercase letter</li>
+              <li id="lowercaseReq"><i class="fas fa-circle"></i> One lowercase letter</li>
+              <li id="numberReq"><i class="fas fa-circle"></i> One number</li>
+              <li id="specialReq"><i class="fas fa-circle"></i> One special character</li>
+            </ul>
+          </div>
+        </div>
+        
+        <button type="submit" id="submitBtn">Create Account</button>
+      </form>
+      
+      <div class="login-link">
+        <p>Already have an account? <a href="student-login.html">Login here</a></p>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

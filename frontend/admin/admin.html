@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student Submissions</title>
+    <script src="js/auth.js"></script>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </header>
+        
+        <div class="stats-container">
+            <div class="stat-card total">
+                <h3>Total Submissions</h3>
+                <div class="stat-number" id="totalSubmissions">0</div>
+            </div>
+            <div class="stat-card pending-stat">
+                <h3>Pending</h3>
+                <div class="stat-number" id="pendingSubmissions">0</div>
+            </div>
+            <div class="stat-card approved-stat">
+                <h3>Approved</h3>
+                <div class="stat-number" id="approvedSubmissions">0</div>
+            </div>
+            <div class="stat-card rejected-stat">
+                <h3>Rejected</h3>
+                <div class="stat-number" id="rejectedSubmissions">0</div>
+            </div>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="pending">Pending Submissions</button>
+            <button class="tab-btn" data-tab="approved">Approved Submissions</button>
+            <button class="tab-btn" data-tab="rejected">Rejected Submissions</button>
+        </div>
+        
+        <div class="tab-content">
+            <div class="tab-pane active" id="pending-tab">
+                <div class="loading" id="pending-loading">Loading submissions...</div>
+                <table id="pending-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Marksheet No.</th>
+                            <th>Physics</th>
+                            <th>Chemistry</th>
+                            <th>Maths</th>
+                            <th>Cutoff</th>
+                            <th>DOB</th>
+                            <th>Submitted</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pending-table-body">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="empty-state" id="pending-empty" style="display: none;">
+                    No pending submissions
+                </div>
+            </div>
+            
+            <div class="tab-pane" id="approved-tab">
+                <div class="loading" id="approved-loading">Loading submissions...</div>
+                <table id="approved-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Marksheet No.</th>
+                            <th>Physics</th>
+                            <th>Chemistry</th>
+                            <th>Maths</th>
+                            <th>Cutoff</th>
+                            <th>DOB</th>
+                            <th>Submitted</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="approved-table-body">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="empty-state" id="approved-empty" style="display: none;">
+                    No approved submissions
+                </div>
+            </div>
+            
+            <div class="tab-pane" id="rejected-tab">
+                <div class="loading" id="rejected-loading">Loading submissions...</div>
+                <table id="rejected-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Marksheet No.</th>
+                            <th>Physics</th>
+                            <th>Chemistry</th>
+                            <th>Maths</th>
+                            <th>Cutoff</th>
+                            <th>DOB</th>
+                            <th>Submitted</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rejected-table-body">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="empty-state" id="rejected-empty" style="display: none;">
+                    No rejected submissions
+                </div>
+            </div>
+        </div>
+        
+        <div class="allotment-section">
+            <button class="allot-btn" id="allotBtn">Run Seat Allotment</button>
+        </div>
+    </div>
+    
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Confirm Action</h3>
+            <p id="modalMessage">Are you sure you want to proceed?</p>
+            <div class="modal-buttons">
+                <button class="action-btn reject-btn" id="modalCancel">Cancel</button>
+                <button class="action-btn approve-btn" id="modalConfirm">Confirm</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/app.js" defer></script>
+    <script src="js/admin.js" defer></script>
+</body>
+</html>

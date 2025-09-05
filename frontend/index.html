@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Counseling Portal</title>
+  <link rel="stylesheet" href="main/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-graduation-cap"></i>
+        <span>College Counseling Portal</span>
+      </div>
+      <nav>
+        <a href="student/login.html">Student Login</a>
+        <a href="student/signup.html">Student Sign Up</a>
+        <a href="admin/login.html">Admin Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="container">
+    <h1>Welcome to the College Counseling Portal</h1>
+    <p>This portal allows students to:</p>
+    <ul>
+      <li>Register and login as a student</li>
+      <li>Fill and track choice lists for counseling</li>
+      <li>Check allotment results</li>
+    </ul>
+
+    <p>Administrators can:</p>
+    <ul>
+      <li>Manage student submissions and allotments</li>
+      <li>Monitor counseling progress</li>
+      <li>Approve or override student submissions if needed</li>
+    </ul>
+
+    <div class="actions">
+      <button onclick="window.location.href='student/login.html'">
+        <i class="fas fa-user-graduate"></i> Student Login
+      </button>
+      <button onclick="window.location.href='student/signup.html'">
+        <i class="fas fa-user-plus"></i> Student Sign Up
+      </button>
+      <button onclick="window.location.href='admin/login.html'">
+        <i class="fas fa-user-tie"></i> Admin Login
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 College Counseling Portal. All rights reserved.</p>
+      <p>Contact: info@collegecounseling.com | +91-123-456-7890</p>
+    </div>
+  </footer>
+
+</body>
+</html>
